@@ -43,11 +43,17 @@ STEPS
     arr points to the first element and arr + n - 1 points to the last
     arr + n would be out of bounds
 
+    After rotation: [7,6,5,4,3,2,1]
+
 11 - reverse_range(arr, arr + k - 1); reverses the first k elements.
     After full reversal, first k elements need re-reversal
 
+    After rotation: [5,6,7,4,3,2,1]
+
 12 - reverse_range(arr + k, arr + n - 1); reverses the remaining n-k
     elements. arr + k points to element after the first k elements
+
+    After rotation: [5,6,7,1,2,3,4]
 
 
 */
