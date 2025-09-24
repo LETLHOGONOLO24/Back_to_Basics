@@ -36,6 +36,8 @@ STEPS
 8 -  k %= n; ensures k is within array bounds using modulo. Prevents
     unnecessary full rotations (k=7, n=7 → k=0)
 
+    return; means exit function early, return nothing
+
 9 - if (k == 0) return; early return if no effective rotation needed
 10 - reverse_range(arr, arr + n - 1); reverses the entire array. arr
     points to first element, arr + n - 1 points to last element
