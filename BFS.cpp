@@ -38,7 +38,37 @@ STEPS
 
 5 - The while loop only loops when the queue is not empty and since it has
     values of the first element and its distance, its going to loop
+
+    auto [r,c,dist]: C++17 structured binding to unpack tuple. Basically, 
+    q.front() is retrieving the tuple (0, 0, 1). This line of code says this
+    tuple should be at the front or it is the first element in the queue (oldest
+    one inserted)
+
+    Once we process that element (unpack r, c, dist and maybe expand neighbors),
+    it’s no longer needed. So, q.pop() → removes that front element from the queue.
+    If you don’t pop, then q.front() would always give you the same element again
+    and again like an infinite loop.
+
+6 - The if statement says If we reached destination (bottom-right), return current
+    distance
+
+7 - The for loop says delta row and delta column are our indices in directions. 
+    new row adds the row recorded in the queue with the index dr, same with new column
     
+    New row and new column should be less than 2 so that they are not out of bounds
+    Both nr and nc should be 1, they musn't alternate because the program might check
+    blocked cell
+
+    grid[nr][nc] == 0 means it must be on a zero in the grid and visited must be
+    false meaning it hasnt visited this zero. If all the conditions are true, 
+
+    visited[nr][nc] = true; mark this cell as visited and q.push({nr, nc, dist+1});
+    push these tuples in the queue while increasing the distance by 1
+
+    IN SHORT, THE IF STATEMENT WILL CHECK THE NEXT ROW, SAME COLUMN BECAUSE IT CHECKS
+    THE SHORTEST PATH
+
+8 - Return -1 if no path is found
 
 
 
@@ -56,6 +86,7 @@ class Solution {
     int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
         int n = grid.size();
 
+        // Edge case, check whether we're not checking on a blocked cell
         if (grid[0][0] == 1 || grid[n-1][n-1] == 1) return -1;
 
         vector<pair<int,int>> directions = {{1,0},{-1,0},{0,1},{0,-1},{1,1},{1,-1},{-1,1},{-1,-1}};
