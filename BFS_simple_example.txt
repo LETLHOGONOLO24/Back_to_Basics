@@ -1,0 +1,148 @@
+Problem: Binary Tree Level Order Traversal - Given the root of a binary tree, return the level
+	order traversal of its nodes values (i.e., from left to right, level by level)
+	
+      1
+     / \
+    2   3
+   / \   \
+  4   5   6
+  
+from collections import deque
+
+def levelorder(root):
+    # Line 1: Check if root is empty
+    if not root:
+        return []
+    
+    # Line 2-3: Initialize result list and queue with root
+    result = []
+    queue = deque([root])  # queue = [Node(1)]
+	
+Initial State:
+
+result = []
+queue = [1]  (Node with value 1)
+
+--- First while loop iteration (queue has 1 element): ---
+
+while queue:  # queue = [1] → TRUE
+    level_size = len(queue)  # level_size = 1
+    current_level = []       # current_level = []
+	
+For loop (runs 1 time):
+
+    for _ in range(level_size):  # _ = 0
+        node = queue.popleft()   # node = Node(1), queue becomes []
+        current_level.append(node.val)  # current_level = [1]
+        
+        if node.left:    # Node(1).left = Node(2) → TRUE
+            queue.append(node.left)  # queue = [2]
+        if node.right:   # Node(1).right = Node(3) → TRUE  
+            queue.append(node.right) # queue = [2, 3]
+	
+	result.append(current_level)  # result = [[1]]
+	
+State after 1st level:
+
+result = [[1]]
+queue = [2, 3]
+current_level = [1] (appended to result)
+
+--- Second while loop iteration (queue has 2 elements): ---
+
+while queue:  # queue = [2, 3] → TRUE
+    level_size = len(queue)  # level_size = 2
+    current_level = []       # current_level = []
+	
+For loop runs iteration 1:
+
+    for _ in range(level_size):  # _ = 0
+        node = queue.popleft()   # node = Node(2), queue becomes [3]
+        current_level.append(node.val)  # current_level = [2]
+        
+        if node.left:    # Node(2).left = Node(4) → TRUE
+            queue.append(node.left)  # queue = [3, 4]
+        if node.right:   # Node(2).right = Node(5) → TRUE
+            queue.append(node.right) # queue = [3, 4, 5]
+			
+For loop iteration 2:
+
+    for _ in range(level_size):  # _ = 1
+        node = queue.popleft()   # node = Node(3), queue becomes [4, 5]
+        current_level.append(node.val)  # current_level = [2, 3]
+        
+        if node.left:    # Node(3).left = None → FALSE
+            queue.append(node.left)  # Skip
+        if node.right:   # Node(3).right = Node(6) → TRUE
+            queue.append(node.right) # queue = [4, 5, 6]
+			
+	result.append(current_level)  # result = [[1], [2, 3]]
+	
+State after 2nd level:
+
+result = [[1], [2, 3]]
+queue = [4, 5, 6]
+current_level = [2, 3] (appended to result)
+
+--- Third while loop iteration (queue has 3 elements): ---
+
+while queue:  # queue = [4, 5, 6] → TRUE
+    level_size = len(queue)  # level_size = 3
+    current_level = []       # current_level = []
+	
+For loop iteration 1:
+
+    for _ in range(level_size):  # _ = 0
+        node = queue.popleft()   # node = Node(4), queue becomes [5, 6]
+        current_level.append(node.val)  # current_level = [4]
+        
+        if node.left:    # Node(4).left = None → FALSE
+            queue.append(node.left)  # Skip
+        if node.right:   # Node(4).right = None → FALSE
+            queue.append(node.right) # Skip
+			
+For loop iteration 2:
+
+    for _ in range(level_size):  # _ = 1
+        node = queue.popleft()   # node = Node(5), queue becomes [6]
+        current_level.append(node.val)  # current_level = [4, 5]
+        
+        if node.left:    # Node(5).left = None → FALSE
+            queue.append(node.left)  # Skip
+        if node.right:   # Node(5).right = None → FALSE
+            queue.append(node.right) # Skip
+			
+For loop iteration 3:
+
+    for _ in range(level_size):  # _ = 2
+        node = queue.popleft()   # node = Node(6), queue becomes []
+        current_level.append(node.val)  # current_level = [4, 5, 6]
+        
+        if node.left:    # Node(6).left = None → FALSE
+            queue.append(node.left)  # Skip
+        if node.right:   # Node(6).right = None → FALSE
+            queue.append(node.right) # Skip
+			
+    result.append(current_level)  # result = [[1], [2, 3], [4, 5, 6]]
+	
+State after 3rd level:
+
+result = [[1], [2, 3], [4, 5, 6]]
+queue = []
+current_level = [4, 5, 6] (appended to result)
+
+Final step:
+
+while queue:  # queue = [] → FALSE
+return result  # returns [[1], [2, 3], [4, 5, 6]]
+
+Final Output: [[1], [2, 3], [4, 5, 6]]
+
+Level 0: [1]           ← Process 1, add 2,3 to queue
+         / \
+Level 1: [2, 3]        ← Process 2,3, add 4,5,6 to queue  
+       / \   \
+Level 2: [4, 5, 6]     ← Process 4,5,6, queue empty
+
+_ in for _ in range means just repeat the level_size, we don't care about the loop counter
+	value
