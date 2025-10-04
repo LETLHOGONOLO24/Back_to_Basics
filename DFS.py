@@ -16,6 +16,8 @@ STEPS
     r < 0 or c < 0 or r >= rows or c >= cols: out of grid bounds → stop.
     grid[r][c] == "0": the current cell is water (not part of an island) → stop.
 
+    After starting at the nested loops, the code comes here
+
     (r, c) in visited: already explored this cell → stop.
     If any of these are true, the function returns without doing anything.
 
@@ -32,7 +34,7 @@ STEPS
         flood fill). This explores the whole connected component of "1"s.
 
 6 - count = 0 - initialize island counter
-7 - Nested loops to visit every cell in the grid.
+7 - Nested loops to visit every cell in the grid. (code starts here, r=0, c=0)
 
 8 - if grid[r][c] == "1" and (r, c) not in visited: If the cell is land ("1")
     and hasn't been visited yet, it marks the start of a new island.

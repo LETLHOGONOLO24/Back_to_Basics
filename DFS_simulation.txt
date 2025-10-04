@@ -151,3 +151,8 @@ count += 1 # count = 2
 				dfs(0,3) # Up -> water
 				dfs(1,4) # Right -> out of bounds
 				dfs(1,2) # Left -> water
+				
+# What I'm getting from this DFS pattern is that when conditions are met (if grid[r][c] == "1"
+	and (r, c) not in visited:) dfs(r,c) which is the recursive part will allow the code to explore
+	one direction (DOWN) until it finds the solution (1 = land) or hits a dead-end (0 = water or
+	out of bounds)
