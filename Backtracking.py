@@ -22,7 +22,7 @@ def subsets(nums):
     def backtrack(index):
         result.append(list(current)) # add a copy of current subset
         for i in range(index, len(nums)):
-            current.append(nums[i]):
+            current.append(nums[i])
             backtrack(i + 1)
             current.pop()
 
