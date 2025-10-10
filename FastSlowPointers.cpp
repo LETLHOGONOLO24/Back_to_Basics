@@ -13,6 +13,30 @@ You must solve it using O(1) space (no extra data structures).
 STEPS
 
 
+1 - struct ListNode define a singly linked-list node type ListNode:
+    - int val; — the data stored in the node.
+    - ListNode* next; — pointer to the next node (or NULL/nullptr if
+    none).
+
+2 - constructor ListNode(int x) : val(x), next(NULL) {} — initializes
+    val with x and sets next to NULL.
+3 - declare hasCycle, a function that receives head (pointer to first
+    node) and returns true if a cycle exists.
+
+4 - slow — will move one node per loop iteration.
+    - fast — will move two nodes per iteration.
+5 - the while guard fast != nullptr && fast->next != nullptr ensures:
+
+    - fast exists and fast->next exists so fast->next->next is safe to
+    access.
+    - If either is nullptr, we've reached the list end → no cycle.
+
+6 - slow = slow->next; — advance slow by 1.
+7 - fast = fast->next->next; — advance fast by 2.
+
+8 - if slow == fast (pointer equality), they are pointing to the same
+    node in memory ⇒ a cycle exists → return true.
+9 - if loop exits, fast hit the end → no cycle → return false.
 
 
 */
