@@ -33,6 +33,14 @@ Explanation:
 Even though the end of one interval equals the start of another,
 they are merged since they touch.
 
+Constraints:
+
+1 <= intervals.length <= 10^4
+
+intervals[i].length == 2
+
+0 <= start_i <= end_i <= 10^4
+
 
 
 */
