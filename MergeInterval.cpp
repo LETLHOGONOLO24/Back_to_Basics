@@ -1,6 +1,13 @@
 /*
 
+PROBLEM
 
+
+You are given an array of intervals where
+intervals[i] = [start_i, end_i].
+
+Merge all overlapping intervals and return an array of the non-
+overlapping intervals that cover all the intervals in the input.
 
 */
 
