@@ -63,9 +63,8 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
         else {
             merged.back()[1] = max(merged.back()[1], interval[1]);
         }
-
-        return merged;
     }
+     return merged;
 }
 
 int main() {
