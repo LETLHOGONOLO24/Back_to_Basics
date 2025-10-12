@@ -21,6 +21,20 @@ Output:
 Explanation:
 Intervals [1,3] and [2,6] overlap → merged into [1,6].
 
+Example 2:
+
+Input:
+intervals = [[1,4],[4,5]]
+
+Output:
+[[1,5]]
+
+Explanation:
+Even though the end of one interval equals the start of another,
+they are merged since they touch.
+
+
+
 */
 
 #include <iostream>
