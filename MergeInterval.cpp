@@ -43,6 +43,41 @@ intervals[i].length == 2
 
 
 
+STEPS
+
+
+1 - #include <algorithm> – To use sort()
+2 - vector<vector<int>> merge(vector<vector<int>>& intervals) Defines
+    a function merge that takes a reference to a 2D vector intervals
+    and returns a merged version.
+
+3 - sort(intervals.begin(), intervals.end()); Sort intervals by their
+    start time (the first element of each pair). Since intervals are
+    vectors themselves, sort() will automatically sort by the first
+    element, then by second if equal.
+
+4 - vector<vector<int>> merged; Create an empty vector to store merged
+    intervals.
+5 - if (merged.empty() || merged.back()[1] < interval[0]):
+
+    - merged.empty(): if this is the first interval.
+    - merged.back()[1] < interval[0]: if the end of the last merged
+    interval is less than the start of the current interval, then
+    there’s no overlap.
+
+    - If either condition is true → just push it.
+6 - merged.back()[1] = max(merged.back()[1], interval[1]); If overlapping,
+    update the end of the last merged interval to the maximum end between
+    the two overlapping ones.
+    - This merges them into one combined interval.
+
+
+
+
+
+
+
+
 */
 
 #include <iostream>
