@@ -16,7 +16,32 @@ after the previous one finishes.
 STEPS
 
 
-1 - 
+1 - activities = list(zip(start, end)) Combines both start and end
+    lists into pairs for each activity, like:
+
+    [(1,2), (3,4), (0,6), (5,7), (8,9), (5,9)]
+
+2 - activities.sort(key=lambda x: x[1]) Sorts the activities by their
+    end time. The greedy idea here is always choose the activity that
+    finishes earliest — this leaves more room for the next one.
+
+    [(1,2), (3,4), (0,6), (5,7), (8,9), (5,9)]
+
+    Same in this example, but in other cases order might change.
+
+3 - count = 1 We can always choose the first activity after sorting.
+4 - last_end_time = activities[0][1] Keeps track of the ending time
+    of the last selected activity. Initially, it's the end time of the
+    first activity (which ends earliest).
+
+5 - for i in range(1, n): Iterate through all remaining activities.
+6 - if activities[i][0] >= last_end_time: If the start time of the current
+    activity is greater or equal to the end time of the previously selected
+    activity → we can perform it.
+
+7 - count += 1 and last_end_time = activities[i][1] - When selected, increment
+    the count and update the last ending time.
+
 
 
 
