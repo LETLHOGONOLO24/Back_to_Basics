@@ -1,0 +1,87 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int missingNumber(vector<int>& nums) {
+    int i = 0;
+    int n = nums.size();
+
+    while (i < n) {
+        int correctIndex = nums[i];
+        if (nums[i] < n && nums[i] != nums[correctIndex]) {
+            swap(nums[i], nums[correctIndex]);
+        }
+        else {
+            i++;
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (nums[i] != 1) {
+            return i;
+        }
+    }
+
+    return n;
+}
+
+int main() {
+    vector<int> nums = {4, 0, 2, 1};
+    cout << "Missing number: " << missingNumber(nums) << endl;
+    return 0;
+}
+
+
+When i = 0 {
+	correctIndex = nums[0] = 4;
+	if (nums[0] < 4 && nums[0] != nums[4]) { // 4 = 4 && 4 != out of range FALSE
+	}
+	else {
+		i++; // i = 1
+	}
+	
+When i = 1 {
+	correctIndex = nums[1] = 0;
+	if (nums[1] < 4 && nums[1] != nums[0]) { // 0 < 4 && 1 != 4 TRUE
+		swap(nums[1], nums[0]); // 0 with 4 = [0, 4, 2, 1]
+	}
+	
+When i = 1 {
+	correctIndex = nums[1] = 4;
+	if ((nums[1] < 4 && nums[1] != nums[4]) { // FALSE
+	}
+	else {
+		i++; // i = 2
+	}
+	
+When i = 2 {
+	correctIndex = nums[2] = 2;
+	if (nums[2] < 4 && nums[2] != nums[2]) { // 2 < 4 && 2 != 2 FALSE
+	}
+	else {
+		i++; // i = 3
+	}
+	
+When i = 3 {
+	correctIndex = nums[3] = 1;
+	if (nums[3] < 4 && nums[3] != nums[1]) { // 1 < 4 && 1 != 4 TRUE
+		swap(nums[3], nums[1]); // 1 with 4 = [0, 1, 2, 4]
+	}
+	
+for (int i = 0; i < n; i++) {
+        if (nums[i] != i) {
+            return i;
+        }
+    }
+	
+When i = 0 {
+	if (nums[0] != i) { // 0 != 0 FALSE
+	}
+}
+
+When i = 1 {
+	if (nums[1] != i)
+	}
+}
+
+When i = 3, i will be returned because nums[3] which is 4 != 3
