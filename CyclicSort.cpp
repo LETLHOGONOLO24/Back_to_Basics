@@ -16,7 +16,21 @@ Explanation: All numbers from 0 to 4 are expected → 3 is missing.
 STEPS
 
 
-1 - 
+1 - while (i < n) { We loop through each index until we reach the end.
+2 - int correctIndex = nums[i]; Each number x should ideally be at
+    index x. So correctIndex is where the current number should go.
+
+3 - if (nums[i] < n && nums[i] != nums[correctIndex]) {
+    swap(nums[i], nums[correctIndex]);
+    } 
+
+    We only swap when:
+    - The number is within range (less than n), and
+    - It is not already in the correct position.
+    - If both are true → swap to move it to its correct index.
+
+4 - If the number is already in the correct position (or invalid),
+    move to the next index.
 
 
 
