@@ -1,0 +1,119 @@
+n = 5
+edges = {{0,1}, {1,2}, {3,4}}
+parent = [0,1,2,3,4]
+rank = [0,0,0,0,0]
+n = components = 5
+
+UnionFind(int n) {
+	parent.resize(n); // Since parent is a vector, its size is 5
+	rank.resize(n, 0); // rank will be a vector of 5 0s
+	
+FOR EDGE 1 {0,1}
+u = edge[0] = 0;
+v = edge[1] = 1;
+
+rootU = uf.find(u = 0);
+find(0) {
+	if (parent[0] != 0) {// FALSE
+	}
+	return parent[0] = 0
+	
+rootV = uf.find(v = 1);
+find(1) {
+	if (parent[1] != 1) { // FALSE
+	}
+	return parent[1] = 1;
+	
+if (rootU != rootV) { // TRUE
+	uf.unite(0, 1) {
+		rootX = find(0) = 0;
+		rootY = find(1) = 1;
+		
+		if (rootX == rootY) // FALSE
+		
+		// rank[rootX] > rank[rootY]
+		if (rank[0] > rank[1]) { // FALSE
+		
+		else if (rank[rootX] < rank[rootY]) { // FALSE
+		
+		else { // TRUE
+			parent[1] = rootX = 0;
+			// parent = [0,0,2,3,4]
+			
+			rank[0] = rank[0] + 1; // rank[0] = 1
+			// rank = [1,0,0,0,0]
+			
+	components--; // components = 4
+	
+FOR EDGE 2 {1,2}
+u = edge[0] = 1;
+v = edge[1] = 2;
+
+rootU = uf.find(u = 1);
+find(1) {
+	if (parent[1] != 1) // TRUE
+		parent[1] = find(parent[1] = 0); // parent[1] = 0
+	return parent[1] = 0;
+	
+rootV = uf.find(v = 2);
+find(2) {
+	if (parent[2] != 2) // FALSE
+	return parent[2] = 2;
+	
+if (rootU != rootV) { // 0 != 1 TRUE
+	uf.unite(1,2) {
+		rootX = find(1) = 0;
+		rootY = find(2) = 2;
+		
+		if (rootX == rootY) // FALSE
+		
+		if (rank[0] > rank[2]) { // 1 > 0 TRUE
+			parent[2] = rootX = 0
+			// parent = [0,0,0,3,4]
+			// rank = [1,0,0,0,0]
+			
+			components--; components = 3
+			
+FOR EDGE 3 {3,4}
+u = edge[0] = 3;
+v = edge[1] = 4;
+
+rootU = uf.find(u = 3)
+find(3) {
+	if (parent[3] != 3) // FALSE
+	return parent[3] = 3;
+	
+rootV = find(v = 4);
+find(4) {
+	if (parent[4] != 4) // FALSE
+	return parent[4] = 4;
+	
+if (rootU != rootV) { // 3 != 4
+	uf.unite(3, 4) {
+		rootX = find(3) = 3;
+		rootY = find(4) = 4;
+		
+		if (rootX == rootY) // FALSE
+		
+		if (rank[3] > rank[4]) { // 0 = 0 FALSE
+		}
+		
+		else if (rank[3] < rank[4]) { // 0 = 0 FALSE
+		}
+		
+		else {
+			parent[4] = rootX = 3;
+			rank[3] = 0 + 1 = 1;
+			
+			// parent = [0,0,0,3,3]
+			// rank = [1,0,0,1,0]
+			
+		components--; // components = 2
+		
+parent indicates two roots: 0 root for {0,1,2}; 3 root for {3,4}.
+			
+			
+		
+
+			
+	
