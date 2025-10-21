@@ -2,6 +2,7 @@
 
 PROBLEM
 
+
 You are given a sorted list of integers and a target value.
 If the target is found in the list, return its index.
 
@@ -24,7 +25,24 @@ Output: 4
 STEPS
 
 
-1 - 
+1 - left, right = 0, len(nums) - 1: left starts from the first index
+    (0). right starts from the last index (len(nums) - 1).
+
+2 - while left <= right: The loop continues as long as there's a valid
+    search space.
+3 - mid = (left + right) // 2: The // ensures integer division. The
+    middle helps us decide which half to continue searching.
+
+4 - if nums[mid] == target: return mid -> If the element at mid equals
+    target, we return mid immediately
+5 - elif nums[mid] < target: left = mid + 1 -> Since the list is sorted,
+    if the middle element is smaller than the target, the target must
+    be in the right half.
+
+6 - else: right = mid - 1 -> If the middle element is greater, move the
+    search to the left half.
+7 - When the loop ends, left is the position where the target should be
+    inserted to keep the list sorted.
 
 
 
