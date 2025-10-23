@@ -36,7 +36,12 @@ STEPS
     exist, create a new node. or Move to that node. After the loop,
     mark the end node as the end of a word.
 
-4 - 
+4 - bool search(string word) { Traverse through each character. If
+    a character doesn’t exist in children, the word isn’t found. If
+    we reach the end, return whether this node marks the end of a word.
+
+5 - bool startsWith(string prefix) { Same as search, but doesn’t require
+    the word to end — only that the prefix path exists.
 
 
 
