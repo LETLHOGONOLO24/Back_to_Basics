@@ -26,7 +26,11 @@ search("app")     → true
 STEPS
 
 
-1 - 
+1 - Each node stores: A hash map children that maps character → next
+    node. 
+    - A boolean isEndOfWord that marks if a word ends here.
+
+2 - 
 
 
 
