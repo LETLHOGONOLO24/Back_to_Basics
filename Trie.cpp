@@ -30,7 +30,14 @@ STEPS
     node. 
     - A boolean isEndOfWord that marks if a word ends here.
 
-2 - 
+2 - Trie() { root = new TrieNode(); } Initializes the Trie with an
+    empty root node.
+3 - void insert(string word) { For every character: If it doesn’t
+    exist, create a new node. or Move to that node. After the loop,
+    mark the end node as the end of a word.
+
+4 - 
+
 
 
 
