@@ -55,3 +55,13 @@ class Solution:
                     max_area = max(max_area, dfs(r, c))
 
         return max_area
+    
+sol = Solution()
+grid = [
+[0,0,1,0,0,0,1,1],
+[0,1,1,0,0,0,1,0],
+[0,0,0,0,1,0,0,0],
+[1,1,0,0,1,1,0,0]
+]
+
+print(sol.maxAreaOfIsland(grid))
