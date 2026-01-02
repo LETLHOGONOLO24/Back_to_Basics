@@ -1,0 +1,7 @@
+order_id,customer_id,order_date,product,units_sold,price
+101,1,2024-01-01,Laptop,1,12000
+102,2,2024-01-02,Mouse,2,250
+103,2,2024-01-02,Keyboard,1,450
+104,3,2024-01-03,Chair,2,1500
+105,4,2024-01-04,Desk,1,3500
+106,3,2024-01-04,Monitor,1,4200
