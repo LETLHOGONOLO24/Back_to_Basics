@@ -1,0 +1,7 @@
+customer_id,customer_name,city,order_id,order_date,product,units_sold,price
+1,Alice,Johannesburg,101,2024-01-01,Laptop,1,12000
+2,Bongani,Pretoria,102,2024-01-02,Mouse,2,250
+2,Bongani,Pretoria,103,2024-01-02,Keyboard,1,450
+3,Chipo,Cape Town,104,2024-01-03,Chair,2,1500
+3,Chipo,Cape Town,106,2024-01-04,Monitor,1,4200
+4,David,Durban,105,2024-01-04,Desk,1,3500
