@@ -27,3 +27,4 @@ merged_df.to_csv('combined_data.csv', index=False)
 # Lets create a revenue = units_sold * price column
 df_combined = pd.read_csv('combined_data.csv') 
 df_combined['revenue'] = df_combined['units_sold'] * df_combined['price']
+print("Revenue: ", df_combined['revenue'])
