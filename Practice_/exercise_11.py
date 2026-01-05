@@ -28,8 +28,6 @@ mean_value = df['units_sold'].mean()
 df['units_sold'] = df['units_sold'].fillna(mean_value)
 print("\nThe first 3 rows of the csv file: \n", df.head(7))
 
-df.to_csv('sales_day3_filled.csv', index=False)
-
 # Creating a revenue column
 df['revenue'] = df['units_sold'] * df['price']
 
@@ -38,4 +36,6 @@ daily_revenue = df.groupby('date')['revenue'].sum().reset_index()
 print("\nDaily Total Revenue: \n", daily_revenue)
 
 print("\nLets see the revenue column in action: \n", df.head(7))
+
+df.to_csv('sales_day3_filled.csv', index=False)
 
