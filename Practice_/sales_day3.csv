@@ -1,0 +1,7 @@
+date,product,category,units_sold,price
+2024-01-01,Laptop,Electronics,2,12000
+2024-01-02,Mouse,Electronics,,250
+2024-01-03,Keyboard,Electronics,3,450
+2024-01-04,Desk,Furniture,1,3500
+2024-01-05,Chair,Furniture,2,1500
+2024-01-06,Monitor,Electronics,,4200
