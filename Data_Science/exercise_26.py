@@ -14,6 +14,7 @@ import pandas as pd
 
 # lets load the data
 df = pd.read_csv('sales_day5.csv')
+df['revenue'] = df['units_sold'] * df['price']
 
 # Lets use .values to convert a Pandas series to a NumPy array
 marketing_arr = df['marketing_spend'].values
