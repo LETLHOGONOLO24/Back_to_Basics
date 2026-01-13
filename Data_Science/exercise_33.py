@@ -19,6 +19,11 @@ trans_df = pd.read_csv('transactions_day6.csv')
 # Lets merge the CSV files
 df = pd.merge(trans_df, emp_df, on='employee_id')
 
+# Lets fill the empty units_processed before calculating efficiency
+df['units_processed'] = df['units_processed'].fillna(
+    df.groupby('department')['units_processed'].transform('mean')
+)
+
 # Lets convert efficiency_score to a NumPy array
 # We use .values to grab the raw data without the index/labels
 df['efficiency_score'] = df['units_processed'] / (df['errors_made'] + 1)
