@@ -1,0 +1,7 @@
+employee_id,employee_name,department,units_processed,errors_made
+1,Thabo,Sales,260,5
+2,Naledi,Sales,230,9
+3,Amara,Operations,410,3
+4,Kabelo,Operations,370,2
+5,Lerato,Sales,280,4
+6,Sipho,Operations,390,6
