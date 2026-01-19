@@ -37,6 +37,7 @@ conditions = [
 
 choices = ['Bottom 25%', 'Middle 50%', 'Top 25%']
 # NumPy refuses to store words and numbers in the same column, so we have to tell it that default="Unknown" to prevent an error
+# np.select() is an alternative to a long list of if/else
 df['performance_tier'] = np.select(conditions, choices, default="Unknown")
 
 print(df[['employee_name', 'efficiency_score', 'performance_tier']].sort_values('efficiency_score', ascending=False))
