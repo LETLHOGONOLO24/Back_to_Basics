@@ -16,7 +16,7 @@ STEPS
 
 3 - The directions vector stores all possible directions which are 8 (left,
     right, up, down, diagonal left, diagonal right, diagonal up and diagonal
-    down). Each pair represents (row_change, column_change_
+    down). Each pair represents (row_change, column_change_)
 
 4 - The queue stores the row, column, distance. Since the first element is
     the start (0, 0), we say its distance = 1

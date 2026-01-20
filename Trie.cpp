@@ -44,9 +44,6 @@ STEPS
     the word to end — only that the prefix path exists.
 
 
-
-
-
 */
 
 #include <iostream>
