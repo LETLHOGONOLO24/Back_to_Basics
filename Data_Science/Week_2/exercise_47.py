@@ -35,6 +35,17 @@ u_norm = (units - np.min(units)) / (np.max(units) - np.min(units))
 e_norm = (errors - np.min(errors)) / (np.max(errors) - np.min(errors))
 s_norm = (speed - np.min(speed)) / (np.max(speed) - np.min(speed))
 
+print(f"\nu_norm:{u_norm}")
+print(f"e_norm:{e_norm}")
+print(f"s_norm:{s_norm}")
+
+"""
+On each variable above, we subtract the min of each variable from every single
+number in the array divided by the max minus the min and the results are an
+array for each variable
+
+"""
+
 df['composite_score'] = (0.5 * u_norm) + \
                         (0.3 * s_norm) + \
                         (0.2 * (1 - e_norm))
