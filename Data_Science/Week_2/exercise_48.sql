@@ -108,4 +108,8 @@ If the Max and Min are the same (e.g., everyone processed exactly 100 units), th
 0. In math, dividing by zero breaks the universe. NULLIF prevents your query from crashing by turning
 a zero-denominator into a NULL.
 
+The reason why we divide 1.0 by avg_processing_time is because if we used raw numbers, the ones with
+large numbers would get a higher score and we want it to be the other way around. By dividing 1.0 by
+avg_processing_time, the ones with a smaller number would get a higher score and that is what we want
+
 */
