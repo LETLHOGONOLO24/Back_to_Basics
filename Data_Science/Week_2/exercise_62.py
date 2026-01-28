@@ -24,7 +24,7 @@ n_iterations = 1000
 bootstrap_means = []
 
 for i in range(n_iterations):
-    # Sample 4 times from ops_times WITH replacement
+    # Choose random 4 numbers from ops_times then replace them with other 4 numbers
     sample = np.random.choice(ops_times, size=len(ops_times), replace=True)
     # Compute the mean of this specific sample
     bootstrap_means.append(np.mean(sample))
