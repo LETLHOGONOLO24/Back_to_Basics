@@ -1,0 +1,9 @@
+employee_id,employee_name,department,units_processed,errors_made,avg_processing_time,training_hours
+1,Thabo,Sales,260,5,4.2,12
+2,Naledi,Sales,230,9,5.1,8
+3,Lerato,Sales,280,4,4.0,15
+4,Amara,Operations,410,3,3.8,20
+5,Kabelo,Operations,370,2,3.5,22
+6,Sipho,Operations,390,6,4.6,14
+7,Zanele,Operations,360,4,3.9,18
+8,Mpho,Sales,250,6,4.4,10
