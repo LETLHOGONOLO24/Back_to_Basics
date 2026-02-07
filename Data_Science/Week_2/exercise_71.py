@@ -34,10 +34,10 @@ print(f"R squared (Coefficient of Determination): {r_squared:.6f}")
 Yes, absolutely. Here is why:
 
 The p-value Rule: In statistics, a p-value less than $0.05$ means the result is "statistically significant."
-Our p-value is $0.0009$, which is roughly 50 times smaller than the threshold. This tells us there is a $99.9\%$
+Our p-value is 0.0009, which is roughly 50 times smaller than the threshold. This tells us there is a 99.9%
 chance that the link between training and fewer errors is real and not just a random fluke.
 
-The Power of R-squared: An R-squared of $0.86 is exceptionally high. It means that if you want to know why one
+The Power of R-squared: An R-squared of 0.86 is exceptionally high. It means that if you want to know why one
 employee makes more mistakes than another, 86% of the answer lies simply in how much training they received.
 The remaining 14% is due to other factors (like individual talent or equipment issues).
 
