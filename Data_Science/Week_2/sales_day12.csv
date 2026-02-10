@@ -1,0 +1,11 @@
+﻿order_id,region,sales_rep,units_sold,discount_pct,ad_spend,customer_visits,revenue
+1,East,Alice,120,5,2000,45,14400
+2,East,Alice,110,10,1800,40,13200
+3,East,Bob,150,8,2200,55,18000
+4,West,Clara,90,15,1500,38,9900
+5,West,Clara,100,12,1700,42,11500
+6,West,Dan,130,7,2100,50,16250
+7,South,Eva,160,6,2300,60,20000
+8,South,Eva,155,9,2250,58,19500
+9,North,Frank,140,10,2050,52,16800
+10,North,Frank,135,11,2000,50,16200
