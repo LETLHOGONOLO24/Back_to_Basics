@@ -1,0 +1,11 @@
+product_id,product_name,category,cost_price
+1,Laptop,Electronics,152
+2,Phone,Electronics,485
+3,Tablet,Electronics,910
+4,Headphones,Accessories,320
+5,Monitor,Electronics,156
+6,Keyboard,Accessories,121
+7,Mouse,Accessories,750
+8,Printer,Electronics,70
+9,Camera,Electronics,664
+10,Smartwatch,Electronics,171

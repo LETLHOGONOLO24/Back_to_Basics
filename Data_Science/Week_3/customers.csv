@@ -1,0 +1,21 @@
+customer_id,customer_name,region,signup_date
+1,Customer_1,Western Cape,2023-11-24
+2,Customer_2,Western Cape,2023-02-27
+3,Customer_3,Western Cape,2023-01-13
+4,Customer_4,Western Cape,2023-05-21
+5,Customer_5,KwaZulu-Natal,2023-05-06
+6,Customer_6,Gauteng,2023-04-25
+7,Customer_7,KwaZulu-Natal,2023-03-13
+8,Customer_8,KwaZulu-Natal,2023-02-22
+9,Customer_9,KwaZulu-Natal,2023-12-13
+10,Customer_10,Western Cape,2023-10-07
+11,Customer_11,Limpopo,2023-02-14
+12,Customer_12,Gauteng,2023-10-30
+13,Customer_13,Limpopo,2023-08-05
+14,Customer_14,KwaZulu-Natal,2023-01-17
+15,Customer_15,KwaZulu-Natal,2023-01-16
+16,Customer_16,Limpopo,2023-02-17
+17,Customer_17,Limpopo,2023-04-22
+18,Customer_18,Limpopo,2023-04-30
+19,Customer_19,KwaZulu-Natal,2023-09-16
+20,Customer_20,KwaZulu-Natal,2023-11-05
